@@ -1,5 +1,5 @@
 const express = require('express');
-const { Note, Quiz, FlashcardDeck, Video, Scholarship, Opportunity, Post } = require('../models/Content');
+const { Note, Quiz, FlashcardDeck, Video, Scholarship, Opportunity, Post, Exam } = require('../models/Content');
 const User = require('../models/User');
 
 const router = express.Router();
@@ -28,6 +28,12 @@ router.get('/quizzes/:id', async (req, res) => {
 
 router.get('/flashcards', list(FlashcardDeck));
 router.get('/videos', list(Video));
+router.get('/exams', list(Exam));
+router.get('/exams/:id', async (req, res) => {
+  const exam = await Exam.findById(req.params.id);
+  if (!exam) return res.status(404).json({ message: 'Not found' });
+  res.json(exam);
+});
 router.get('/scholarships', async (_req, res) => res.json(await Scholarship.find().sort({ deadline: 1 })));
 router.get('/opportunities', async (_req, res) => res.json(await Opportunity.find().sort({ createdAt: -1 })));
 

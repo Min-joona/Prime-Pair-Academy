@@ -8,6 +8,7 @@ import Notes from './pages/Notes';
 import Quizzes from './pages/Quizzes';
 import Flashcards from './pages/Flashcards';
 import Videos from './pages/Videos';
+import Exams from './pages/Exams';
 import Community from './pages/Community';
 import Leaderboard from './pages/Leaderboard';
 import Scholarships from './pages/Scholarships';
@@ -28,6 +29,7 @@ function App() {
       <Route path="/quizzes" element={guard(<Quizzes />)} />
       <Route path="/flashcards" element={guard(<Flashcards />)} />
       <Route path="/videos" element={guard(<Videos />)} />
+      <Route path="/exams" element={guard(<Exams />)} />
       <Route path="/community" element={guard(<Community />)} />
       <Route path="/leaderboard" element={guard(<Leaderboard />)} />
       <Route path="/scholarships" element={guard(<Scholarships />)} />

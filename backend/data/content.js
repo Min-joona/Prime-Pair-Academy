@@ -100,6 +100,67 @@ A shift in either curve (income, tastes, costs, technology) moves the equilibriu
 Start with choice **C** (the middle value) — if it's too big or small, you know which direction to move. This often beats algebra under time pressure.`,
     tags: ['sat', 'strategy'],
   },
+  {
+    title: 'Trigonometric Ratios',
+    subject: 'Math', level: 'Intermediate', readMinutes: 5,
+    summary: 'SOH-CAH-TOA and the special angles you must memorise.',
+    body: `For a right triangle: **sin = Opposite/Hypotenuse**, **cos = Adjacent/Hypotenuse**, **tan = Opposite/Adjacent** (remember **SOH-CAH-TOA**).
+
+Special values to know by heart:
+- sin 30° = 1/2, cos 30° = √3/2
+- sin 45° = cos 45° = √2/2
+- sin 60° = √3/2, cos 60° = 1/2
+
+Identity: **sin²θ + cos²θ = 1**.`,
+    tags: ['trigonometry', 'grade-11'],
+  },
+  {
+    title: 'Ohm’s Law & Electric Circuits',
+    subject: 'Physics', level: 'Intermediate', readMinutes: 4,
+    summary: 'V = IR and how resistors combine.',
+    body: `**Ohm's law: V = I × R** — voltage equals current times resistance.
+
+- **Series** resistors add: R = R₁ + R₂ + …
+- **Parallel** resistors: 1/R = 1/R₁ + 1/R₂ + …
+
+Power dissipated: **P = VI = I²R**.`,
+    tags: ['electricity', 'grade-10'],
+  },
+  {
+    title: 'The Mole Concept',
+    subject: 'Chemistry', level: 'Intermediate', readMinutes: 5,
+    summary: 'Avogadro’s number and converting grams ↔ moles.',
+    body: `One **mole** = **6.022 × 10²³** particles (Avogadro's number).
+
+- moles = mass ÷ molar mass
+- mass = moles × molar mass
+
+Example: 36 g of water (molar mass 18 g/mol) = 36/18 = **2 moles**.`,
+    tags: ['stoichiometry', 'grade-11'],
+  },
+  {
+    title: 'Photosynthesis',
+    subject: 'Biology', level: 'Beginner', readMinutes: 4,
+    summary: 'How plants turn light into food.',
+    body: `Plants make glucose from carbon dioxide and water using light energy in the chloroplasts:
+
+**6CO₂ + 6H₂O → (light) → C₆H₁₂O₆ + 6O₂**
+
+- Happens in two stages: light reactions (in the thylakoid) and the Calvin cycle (in the stroma).
+- Chlorophyll captures the light energy.`,
+    tags: ['plants', 'grade-9'],
+  },
+  {
+    title: 'Demand, Supply & Elasticity',
+    subject: 'Economics', level: 'Intermediate', readMinutes: 5,
+    summary: 'Why equilibrium moves and what elasticity measures.',
+    body: `Price settles where **demand meets supply** (equilibrium).
+
+**Price elasticity of demand** = %ΔQuantity ÷ %ΔPrice.
+- Elastic (>1): quantity reacts a lot to price (luxuries).
+- Inelastic (<1): quantity barely changes (necessities).`,
+    tags: ['microeconomics', 'grade-11'],
+  },
 ];
 
 const quizzes = [
@@ -209,4 +270,68 @@ const users = [
   { name: 'Meron Alem', email: 'meron@primepair.io', password: 'demo123', xp: 410, streak: 9, avatar: '🐢', badges: ['Rising Star'] },
 ];
 
-module.exports = { notes, quizzes, flashcards, videos, scholarships, opportunities, posts, users };
+// Original matric-style practice exams (Ethiopian Grade 9–12) with answers + explanations.
+const exams = [
+  {
+    title: 'Mathematics — Matric Practice (Set A)', subject: 'Math', grade: 'Grade 12', stream: 'Natural', durationMin: 40,
+    questions: [
+      { prompt: 'If f(x) = 2x² − 3x + 1, what is f(2)?', options: ['1', '3', '5', '7'], answer: 1, explanation: '2(4) − 3(2) + 1 = 8 − 6 + 1 = 3.' },
+      { prompt: 'The roots of x² − 5x + 6 = 0 are:', options: ['2 and 3', '−2 and −3', '1 and 6', '−1 and −6'], answer: 0, explanation: '(x−2)(x−3)=0 → x = 2 or 3.' },
+      { prompt: 'What is log₁₀ 1000?', options: ['2', '3', '10', '100'], answer: 1, explanation: '10³ = 1000, so log = 3.' },
+      { prompt: 'The value of sin 30° + cos 60° is:', options: ['0', '1/2', '1', '√3'], answer: 2, explanation: '1/2 + 1/2 = 1.' },
+      { prompt: 'The derivative of x³ is:', options: ['x²', '3x²', '3x', 'x⁴/4'], answer: 1, explanation: 'd/dx xⁿ = n·xⁿ⁻¹ → 3x².' },
+    ],
+  },
+  {
+    title: 'Physics — Matric Practice (Set A)', subject: 'Physics', grade: 'Grade 12', stream: 'Natural', durationMin: 40,
+    questions: [
+      { prompt: 'The SI unit of force is the:', options: ['Joule', 'Watt', 'Newton', 'Pascal'], answer: 2, explanation: 'Force is measured in newtons (N).' },
+      { prompt: 'A car travels 100 m in 5 s. Its average speed is:', options: ['20 m/s', '25 m/s', '500 m/s', '95 m/s'], answer: 0, explanation: 'speed = distance/time = 100/5 = 20 m/s.' },
+      { prompt: 'Using V = IR, if V = 12 V and R = 4 Ω, then I =', options: ['3 A', '48 A', '8 A', '16 A'], answer: 0, explanation: 'I = V/R = 12/4 = 3 A.' },
+      { prompt: 'Which quantity is a vector?', options: ['Mass', 'Speed', 'Velocity', 'Temperature'], answer: 2, explanation: 'Velocity has magnitude and direction.' },
+      { prompt: 'The acceleration due to gravity on Earth is about:', options: ['1.8 m/s²', '9.8 m/s²', '98 m/s²', '3 × 10⁸ m/s²'], answer: 1, explanation: 'g ≈ 9.8 m/s².' },
+    ],
+  },
+  {
+    title: 'Chemistry — Matric Practice (Set A)', subject: 'Chemistry', grade: 'Grade 12', stream: 'Natural', durationMin: 40,
+    questions: [
+      { prompt: 'The atomic number of an element equals its number of:', options: ['Neutrons', 'Protons', 'Electrons + neutrons', 'Isotopes'], answer: 1, explanation: 'Atomic number = number of protons.' },
+      { prompt: 'One mole of any substance contains how many particles?', options: ['6.022 × 10²³', '3.0 × 10⁸', '1.6 × 10⁻¹⁹', '9.8'], answer: 0, explanation: "Avogadro's number is 6.022 × 10²³." },
+      { prompt: 'The pH of a neutral solution at 25°C is:', options: ['0', '7', '14', '1'], answer: 1, explanation: 'Neutral pH = 7.' },
+      { prompt: 'Which is a noble gas?', options: ['Oxygen', 'Chlorine', 'Argon', 'Sodium'], answer: 2, explanation: 'Argon is in Group 18 (noble gases).' },
+      { prompt: 'The molar mass of water (H₂O) is about:', options: ['10 g/mol', '18 g/mol', '32 g/mol', '44 g/mol'], answer: 1, explanation: '2(1) + 16 = 18 g/mol.' },
+    ],
+  },
+  {
+    title: 'Biology — Matric Practice (Set A)', subject: 'Biology', grade: 'Grade 12', stream: 'Natural', durationMin: 40,
+    questions: [
+      { prompt: 'The basic unit of life is the:', options: ['Atom', 'Cell', 'Tissue', 'Organ'], answer: 1, explanation: 'The cell is the basic unit of life.' },
+      { prompt: 'Photosynthesis mainly takes place in the:', options: ['Mitochondria', 'Nucleus', 'Chloroplast', 'Ribosome'], answer: 2, explanation: 'Chloroplasts carry out photosynthesis.' },
+      { prompt: 'DNA is made of units called:', options: ['Amino acids', 'Nucleotides', 'Fatty acids', 'Monosaccharides'], answer: 1, explanation: 'Nucleotides are the building blocks of DNA.' },
+      { prompt: 'Which blood cells fight infection?', options: ['Red blood cells', 'White blood cells', 'Platelets', 'Plasma'], answer: 1, explanation: 'White blood cells defend against pathogens.' },
+      { prompt: 'The process by which cells divide for growth is:', options: ['Meiosis', 'Mitosis', 'Fertilisation', 'Digestion'], answer: 1, explanation: 'Mitosis produces identical cells for growth.' },
+    ],
+  },
+  {
+    title: 'English — Matric Practice (Set A)', subject: 'English', grade: 'Grade 12', stream: 'General', durationMin: 40,
+    questions: [
+      { prompt: 'Choose the correct sentence:', options: ['He don’t like tea.', "He doesn't likes tea.", "He doesn't like tea.", 'He not like tea.'], answer: 2, explanation: "Third person: doesn't + base verb." },
+      { prompt: 'The synonym of “rapid” is:', options: ['Slow', 'Quick', 'Heavy', 'Late'], answer: 1, explanation: 'Rapid means quick/fast.' },
+      { prompt: 'Choose the correct passive form of “She wrote a letter.”', options: ['A letter is written by her.', 'A letter was written by her.', 'A letter has wrote by her.', 'A letter writes by her.'], answer: 1, explanation: 'Past simple passive: was + past participle.' },
+      { prompt: 'Which word is an adverb?', options: ['Happy', 'Happily', 'Happiness', 'Happier'], answer: 1, explanation: 'Adverbs often end in -ly.' },
+      { prompt: 'Identify the correctly punctuated sentence:', options: ['Its raining outside.', 'It’s raining outside.', 'Its’ raining outside.', 'It raining outside.'], answer: 1, explanation: "It's = it is." },
+    ],
+  },
+  {
+    title: 'Economics — Matric Practice (Set A)', subject: 'Economics', grade: 'Grade 12', stream: 'Social', durationMin: 40,
+    questions: [
+      { prompt: 'The study of individual markets and firms is called:', options: ['Macroeconomics', 'Microeconomics', 'Econometrics', 'Statistics'], answer: 1, explanation: 'Microeconomics studies individual units.' },
+      { prompt: 'When demand rises and supply stays fixed, price usually:', options: ['Falls', 'Rises', 'Stays the same', 'Becomes zero'], answer: 1, explanation: 'Higher demand with fixed supply pushes price up.' },
+      { prompt: 'GDP stands for:', options: ['Gross Domestic Product', 'General Demand Price', 'Government Debt Plan', 'Global Development Program'], answer: 0, explanation: 'GDP = Gross Domestic Product.' },
+      { prompt: 'Money that is widely accepted for goods and services is a:', options: ['Barter', 'Medium of exchange', 'Subsidy', 'Tariff'], answer: 1, explanation: 'A key function of money is as a medium of exchange.' },
+      { prompt: 'A tax placed on imported goods is a:', options: ['Subsidy', 'Tariff', 'Quota', 'Rebate'], answer: 1, explanation: 'A tariff is a tax on imports.' },
+    ],
+  },
+];
+
+module.exports = { notes, quizzes, flashcards, videos, scholarships, opportunities, posts, exams, users };

@@ -96,7 +96,28 @@ const postSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Matric-style practice exams (Ethiopian Grade 9–12), with answers + explanations.
+const examSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    subject: { type: String, required: true, index: true },
+    grade: { type: String, default: 'Grade 12' }, // Grade 9/10/11/12
+    stream: { type: String, default: 'General' }, // Natural / Social / General
+    durationMin: { type: Number, default: 40 },
+    questions: [
+      {
+        prompt: String,
+        options: [String],
+        answer: Number, // index of correct option
+        explanation: String,
+      },
+    ],
+  },
+  { timestamps: true }
+);
+
 module.exports = {
+  Exam: mongoose.models.PPExam || mongoose.model('PPExam', examSchema),
   Note: mongoose.models.Note || mongoose.model('Note', noteSchema),
   Quiz: mongoose.models.Quiz || mongoose.model('Quiz', quizSchema),
   FlashcardDeck: mongoose.models.FlashcardDeck || mongoose.model('FlashcardDeck', flashcardDeckSchema),

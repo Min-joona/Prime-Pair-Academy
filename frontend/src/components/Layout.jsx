@@ -2,7 +2,7 @@ import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import {
   Home, BookOpen, Brain, Layers, Video, Users, Trophy,
-  GraduationCap, Compass, Menu, X, Flame, Star, LogOut,
+  GraduationCap, Compass, Menu, X, Flame, Star, LogOut, FileText,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -11,6 +11,7 @@ const ghefiLinks = [
   { to: '/quizzes', label: 'Quizzes', icon: Brain },
   { to: '/flashcards', label: 'Flashcards', icon: Layers },
   { to: '/videos', label: 'Explain Videos', icon: Video },
+  { to: '/exams', label: 'Matric Exams', icon: FileText },
   { to: '/community', label: 'Community', icon: Users },
   { to: '/leaderboard', label: 'Leaderboard', icon: Trophy },
 ];
