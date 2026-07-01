@@ -3,7 +3,7 @@
 [![MERN](https://img.shields.io/badge/Stack-MERN-brightgreen)](#)
 [![Playful](https://img.shields.io/badge/Vibe-Khan%20Academy%20×%20Duolingo-ffd54a)](#)
 
-A gamified learning platform for Eritrean & Ethiopian students — Khan-Academy depth
+A gamified learning platform for Ethiopian high-school students — Khan-Academy depth
 with Duolingo playfulness. A full rebuild of *Learning-Launchpad* with brand-new UI/UX
 and two original mascots.
 
@@ -11,11 +11,11 @@ and two original mascots.
 
 ## 🐢🐍 Meet the Prime Pair
 
-Two native Eritrean creatures, two learning styles — rendered as **hand-coded SVG mascots**:
+Two friendly mascots, two learning styles — rendered as **hand-coded SVG mascots**:
 
-- **GHEFI** — the *Eritrean Helmeted Turtle* (`Pelomedusa gehafie`). The patient foundation.
+- **GHEFI** — a cheerful turtle. The patient foundation.
   Owns **Short Notes, Quizzes, Flashcards, Explain Videos, Community, Leaderboard**.
-- **LETHE** — the *Eritrean Blind Snake* (`Letheobia erythraea`). The strategic speed.
+- **LETHE** — a quick, friendly snake. The strategic speed.
   Owns **Scholarships, Opportunities, Internships, Club Discovery, Exam Prep** (SAT/DET/IELTS/TOEFL/CSC).
 
 The landing page includes the **"Meet the Prime Pair"** branding spread with annotation

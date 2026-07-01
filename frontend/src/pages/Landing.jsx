@@ -25,7 +25,7 @@ export default function Landing() {
       {/* Hero */}
       <section className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-10 md:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <span className="pill bg-ghefi/10 text-ghefi">Empowering Eritrean & Ethiopian students</span>
+          <span className="pill bg-ghefi/10 text-ghefi">Empowering Ethiopian high-school students</span>
           <h1 className="mt-4 font-display text-5xl font-extrabold leading-[1.05] md:text-6xl">
             Learn it. <span className="text-ghefi">Master it.</span><br />
             Then <span className="text-lethe">launch.</span>
@@ -60,7 +60,7 @@ export default function Landing() {
           <span className="pill bg-lethe/10 text-lethe">The Prime Pair</span>
           <h2 className="mt-3 font-display text-4xl font-extrabold md:text-5xl">Meet the Prime Pair</h2>
           <p className="mx-auto mt-3 max-w-2xl text-ink/60">
-            Two native Eritrean creatures, two learning styles. Ghefi is the patient foundation.
+            Two friendly mascots, two learning styles. Ghefi is the patient foundation.
             Lethe is the strategic speed. Together they cover how you learn <em>and</em> where you're going.
           </p>
         </div>
@@ -75,8 +75,8 @@ export default function Landing() {
               <Callout className="bottom-10 left-2 text-yellow-600">Glowing yellow plastron ↗</Callout>
             </div>
             <h3 className="font-display text-3xl font-extrabold text-ghefi">GHEFI</h3>
-            <p className="text-sm font-bold text-ink/50">The Eritrean Helmeted Turtle · <em>Pelomedusa gehafie</em></p>
-            <p className="mt-2 text-ink/70">Patient, foundational, surface-dwelling — and cheeky enough to know he beat extinction. Ghefi builds visible mastery, one small step at a time.</p>
+            <p className="text-sm font-bold text-ink/50">Your patient study buddy 🐢</p>
+            <p className="mt-2 text-ink/70">Patient, steady, and cheeky — Ghefi builds visible mastery one small step at a time, so nothing feels overwhelming.</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {[[BookOpen, 'Short Notes'], [Brain, 'Quizzes'], [Layers, 'Flashcards'], [Video, 'Explain Videos'], [Users, 'Community'], [Trophy, 'Leaderboard']].map(([Icon, l]) => (
                 <span key={l} className="pill flex items-center gap-1 bg-ghefi/10 text-ghefi"><Icon size={13} /> {l}</span>
@@ -93,8 +93,8 @@ export default function Landing() {
               <Callout className="bottom-8 left-0 text-[#1fae5c]">Neon tail = friendly stylus ↗</Callout>
             </div>
             <h3 className="font-display text-3xl font-extrabold text-lethe">LETHE</h3>
-            <p className="text-sm font-bold text-ink/50">The Eritrean Blind Snake · <em>Letheobia erythraea</em></p>
-            <p className="mt-2 text-ink/70">Gentle, persistent, underground-dwelling — moving fast where others can't see. Lethe uncovers hidden opportunities and clears your path forward.</p>
+            <p className="text-sm font-bold text-ink/50">Your speedy opportunity scout 🐍</p>
+            <p className="mt-2 text-ink/70">Gentle, quick, and always sniffing ahead — Lethe uncovers hidden opportunities and clears your path forward.</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {[[GraduationCap, 'Scholarships'], [Compass, 'Opportunities'], [Brain, 'Exam Prep'], [Users, 'Club Discovery'], [Compass, 'Internships'], [GraduationCap, 'Auto-Apply']].map(([Icon, l], i) => (
                 <span key={i} className="pill flex items-center gap-1 bg-lethe/10 text-lethe"><Icon size={13} /> {l}</span>

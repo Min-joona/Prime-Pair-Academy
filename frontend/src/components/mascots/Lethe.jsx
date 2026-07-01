@@ -1,6 +1,6 @@
-// LETHE — the Eritrean Blind Snake (Letheobia erythraea).
-// Strategic speed: sage-green cylindrical body, cream underbelly,
-// playful forked tongue, glowing neon-green tail tip (a friendly stylus).
+// LETHE — a friendly snake mascot, the strategic speed.
+// Sage-green cylindrical body, cream underbelly, playful forked tongue,
+// glowing neon-green tail tip (a friendly stylus).
 export default function Lethe({ size = 220, className = '', float = false }) {
   return (
     <svg
@@ -9,7 +9,7 @@ export default function Lethe({ size = 220, className = '', float = false }) {
       height={size}
       className={`${className} ${float ? 'animate-float' : ''}`}
       role="img"
-      aria-label="Lethe the blind snake"
+      aria-label="Lethe the friendly snake mascot"
     >
       <defs>
         <linearGradient id="l-body" x1="0" y1="0" x2="1" y2="1">

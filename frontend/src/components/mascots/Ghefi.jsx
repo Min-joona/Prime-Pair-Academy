@@ -1,5 +1,5 @@
-// GHEFI — the Eritrean Helmeted Turtle (Pelomedusa gehafie).
-// Patient foundation: helmet-like shell, oversized brown eyes, glowing yellow plastron.
+// GHEFI — a friendly turtle mascot, the patient foundation.
+// Helmet-like shell, oversized brown eyes, glowing yellow belly.
 export default function Ghefi({ size = 220, className = '', float = false }) {
   return (
     <svg
@@ -8,7 +8,7 @@ export default function Ghefi({ size = 220, className = '', float = false }) {
       height={size}
       className={`${className} ${float ? 'animate-float' : ''}`}
       role="img"
-      aria-label="Ghefi the helmeted turtle"
+      aria-label="Ghefi the friendly turtle mascot"
     >
       <defs>
         <radialGradient id="g-belly" cx="50%" cy="40%" r="65%">
