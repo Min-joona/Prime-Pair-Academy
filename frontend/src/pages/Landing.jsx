@@ -15,7 +15,10 @@ export default function Landing() {
     <div className="min-h-screen">
       {/* Nav */}
       <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <span className="font-display text-2xl font-extrabold">Prime Pair <span className="text-ghefi">Academy</span></span>
+        <span className="flex items-center gap-2 font-display text-2xl font-extrabold">
+          <img src="/favicon.png" alt="" className="h-10 w-10 rounded-xl" />
+          Prime Pair <span className="text-ghefi">Academy</span>
+        </span>
         <div className="flex items-center gap-3">
           <Link to="/login" className="font-display font-bold text-ink/70 hover:text-ink">Log in</Link>
           <Link to="/register" className="btn-ghefi">Get started</Link>

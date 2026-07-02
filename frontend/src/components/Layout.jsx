@@ -58,7 +58,8 @@ export default function Layout({ children }) {
             <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
               {open ? <X /> : <Menu />}
             </button>
-            <Link to="/dashboard" className="font-display text-xl font-extrabold">
+            <Link to="/dashboard" className="flex items-center gap-2 font-display text-xl font-extrabold">
+              <img src="/favicon.png" alt="" className="h-9 w-9 rounded-xl" />
               Prime Pair <span className="text-ghefi">Academy</span>
             </Link>
           </div>
