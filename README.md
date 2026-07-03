@@ -1,62 +1,75 @@
-# Prime Pair Academy 🐢🐍
+# Prime Pair Academy
 
-[![MERN](https://img.shields.io/badge/Stack-MERN-brightgreen)](#)
-[![Playful](https://img.shields.io/badge/Vibe-Khan%20Academy%20×%20Duolingo-ffd54a)](#)
+A gamified learning platform for Ethiopian high-school students, combining structured academic depth with a playful, motivating experience. Guided by two original hand-drawn SVG mascots — **Ghefi** the turtle and **Lethe** the snake — students build mastery through notes, quizzes, and exams, then launch further with curated scholarships and opportunities.
 
-A gamified learning platform for Ethiopian high-school students — Khan-Academy depth
-with Duolingo playfulness. A full rebuild of *Learning-Launchpad* with brand-new UI/UX
-and two original mascots.
+**Live demo:** [prime-pair-academy.vercel.app](https://prime-pair-academy.vercel.app)
 
-> Built by **Amar Hassen Mohammednur**.
+## Overview
 
-## 🐢🐍 Meet the Prime Pair
+**Learn (Ghefi's domain)**
 
-Two friendly mascots, two learning styles — rendered as **hand-coded SVG mascots**:
+- **Short notes** — curriculum-aligned lessons with an in-app reader
+- **Interactive quizzes** — instant feedback, explanations, and XP rewards
+- **Matric exams** — Grade 9–12 practice exams across six subjects, with answers and explanations revealed on submission
+- **Flashcards** — 3D flip decks for memorization
+- **Explain videos** — embedded video lessons
+- **Community & leaderboard** — discussion posts and an XP ranking
 
-- **GHEFI** — a cheerful turtle. The patient foundation.
-  Owns **Short Notes, Quizzes, Flashcards, Explain Videos, Community, Leaderboard**.
-- **LETHE** — a quick, friendly snake. The strategic speed.
-  Owns **Scholarships, Opportunities, Internships, Club Discovery, Exam Prep** (SAT/DET/IELTS/TOEFL/CSC).
+**Launch (Lethe's domain)**
 
-The landing page includes the **"Meet the Prime Pair"** branding spread with annotation
-callouts pointing to each mascot's signature features.
+- **Scholarships** — curated international funding opportunities with deadlines
+- **Opportunities** — internships, programs, clubs, and exam-prep tracks
 
-## ✨ Features
+**Gamification** — XP, levels, streaks, and badges persist across the platform.
 
-- **Gamification** — XP, levels (100 XP each), streaks, badges, live leaderboard
-- **Short Notes** — subject-filtered, in-app reader
-- **Interactive Quizzes** — instant feedback, explanations, XP rewards
-- **Flashcards** — 3D flip decks
-- **Explain Videos** — YouTube embeds (swap in your own later)
-- **Community** — posts with likes
-- **Scholarships & Opportunities** — Lethe's real, curated listings with deadlines
-- Fully **mobile-responsive**, playful Baloo/Nunito type system
+## Architecture
 
-## 🧱 Tech Stack
-
-React 18 · Vite · Tailwind CSS · Framer Motion · Node.js · Express · Mongoose · MongoDB · JWT
-
-## 🚀 Getting Started
-
-### Backend
-```bash
-cd backend && npm install
-cp .env.example .env      # set MONGODB_URI + JWT_SECRET
-npm run seed              # loads notes, quizzes, decks, videos, scholarships, users…
-npm run dev               # http://localhost:5002
+```
+prime-pair-academy/
+├── backend/          Express REST API
+│   ├── models/       User, Note, Quiz, Exam, FlashcardDeck, Video,
+│   │                 Scholarship, Opportunity, Post
+│   └── routes/       /api/content · /api/auth
+└── frontend/         React app (Vite)
+    └── src/
+        ├── components/mascots/   Hand-coded SVG mascots
+        └── pages/                Landing, Dashboard, Notes, Quizzes,
+                                  Exams, Flashcards, Videos, Community…
 ```
 
-### Frontend
+## Tech Stack
+
+| Layer      | Technology                                       |
+| ---------- | ------------------------------------------------ |
+| Frontend   | React 18, Vite, Tailwind CSS, Framer Motion      |
+| Backend    | Node.js, Express, Mongoose                       |
+| Database   | MongoDB Atlas                                    |
+| Security   | Helmet, rate limiting, input sanitization, JWT   |
+
+## Getting Started
+
+**Prerequisites:** Node.js 18+ and a MongoDB connection string.
+
 ```bash
-cd frontend && npm install
-npm run dev               # http://localhost:5173
+# API
+cd backend
+npm install
+cp .env.example .env   # configure environment
+npm run seed           # optional: load curriculum content
+npm run dev
+
+# App
+cd frontend
+npm install
+npm run dev
 ```
 
-**Login:** `amar@primepair.io` / `demo123`
+Environment variables are documented in [`backend/.env.example`](backend/.env.example) and [`frontend/.env.example`](frontend/.env.example).
 
-## ☁️ Deployment
-Two Vercel projects: `backend/` (env: `MONGODB_URI`, `JWT_SECRET`, `ALLOWED_ORIGINS`, `VERCEL=1`)
-and `frontend/` (env: `VITE_API_URL`). Seed once against Atlas.
+## Author
 
-## 📄 License
+**Amar Hassen Mohammednur** — [github.com/Min-joona](https://github.com/Min-joona)
+
+## License
+
 MIT
